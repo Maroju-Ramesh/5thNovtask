@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>HTML Picture and Form Example</title>
+</head>
+<body>
+    <!-- Picture Tag Example -->
+    <h2>Responsive Image with Picture Tag</h2>
+    <picture>
+        <source media="(min-width: 800px)" srcset="../task/pic3.jpg" height="100px">
+        <source media="(min-width: 400px)" srcset="../task/pic4.jpg" height="100px">
+        <img src="../task/pic1.jpeg" alt="A descriptive alternative text" height="100px">
+    </picture>
+
+    <!-- Form Example with Options, Datalist, Action, and Formaction -->
+    <h2>Form Example</h2>
+    <form action="./class.html" method="get">
+        <!-- Text input with datalist -->
+        <label for="browser">Choose your favorite browser:</label>
+        <br><input list="browsers" id="browser" name="browser" placeholder="Select a browser">
+        <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Mozilla Firefox">
+            <option value="Safari">
+            <option value="Microsoft Edge">
+            <option value="Opera">
+        </datalist>
+
+        <br>
+
+        <!-- Dropdown selection -->
+        <label for="country">Choose your country:</label>
+       <br> <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="india">India</option>
+        </select>
+
+        <br>
+
+        <!-- Submit buttons with formaction -->
+        <button type="submit" formaction="https://www.google.com/chrome/">Submit to Main Form</button>
+       <br> <button type="submit" formaction="./practice.html">Submit to Alternate Form</button>
+    </form>
+</body>
+</html>
